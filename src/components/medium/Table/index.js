@@ -6,6 +6,7 @@ import GetData from '../../../funtion/GetData'
 
 import 'semantic-ui-css/semantic.min.css'
 import 'animate.css'
+import ModalDimmer from '../ModalDimmer';
 
 export default class TableTicket extends Component {
     constructor(props) {
@@ -16,7 +17,7 @@ export default class TableTicket extends Component {
     }
 
     componentDidMount = async () => {
-        const URL = 'tickets/'
+        const URL = '/'
         const response = await GetData(URL)
 
         await this.setState({
@@ -26,7 +27,7 @@ export default class TableTicket extends Component {
 
     render() {
         const RowSegment = this.state.ticket.map(item => {
-            const {name,status,derivation,destination,log} = item
+            const { name, status, derivation, destination, log } = item
             return (
                 <Table.Row>
                     <Table.Cell collapsing><ButtonEdit /></Table.Cell>
@@ -54,6 +55,17 @@ export default class TableTicket extends Component {
                 <Table.Body>
                     {RowSegment}
                 </Table.Body>
+
+                <Table.Footer fullWidth>
+                    <Table.Row>
+                        <Table.HeaderCell colSpan='6' textAlign='center'>
+                            {/* <Button floated='right' icon labelPosition='left' primary size='small'>
+                                 Add Ticket
+                            </Button> */}
+                            <ModalDimmer />
+                        </Table.HeaderCell>
+                    </Table.Row>
+                </Table.Footer>
             </Table>
         )
     }
