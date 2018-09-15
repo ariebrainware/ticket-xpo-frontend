@@ -1,14 +1,23 @@
 import React, { Component } from 'react'
+
+import TableTicket from './components/medium/Table'
+import ContainerTicket from './components/large/Container'
+
 import './App.css'
+import 'animate.css'
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <header className="App-header">
-                    <h1 className="App-title">Ticket Xpo</h1>
+            <div className='animated App fadeIn delay-1s'>
+                <header className='App-header'>
+                    <h1 className='App-title'>Ticket Xpo</h1>
                 </header>
-                <p className="App-intro" />
+                <div className='wrap'>
+                    <ContainerTicket>
+                        <TableTicket />
+                    </ContainerTicket>
+                </div>
             </div>
         )
     }
