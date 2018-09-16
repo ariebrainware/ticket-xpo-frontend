@@ -1,6 +1,6 @@
 import request from '../Axios'
 
-const getData = (URL) =>{
+const GetData = (URL) =>{
     return new Promise((resolve,rejects)=>{
         request.get(URL)
             .then(response=>resolve(response))
@@ -8,4 +8,4 @@ const getData = (URL) =>{
     })  
 }
 
-export default getData
+export default GetData

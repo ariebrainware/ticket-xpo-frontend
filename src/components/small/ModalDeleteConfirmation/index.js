@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Modal } from 'semantic-ui-react'
-import FormAddTicket from '../FormAddTicket'
+import FormDeleteConfirmation from '../../medium/FormDeleteConfirmation'
 
 import 'animate.css'
 
@@ -17,12 +17,12 @@ class ModalDimmer extends Component {
 
     return (
       <div>
-        <Button inverted onClick={this.show(true)}>Add Ticket</Button>
+        <Button circular icon='trash alternate' onClick={this.show(true)} />
 
-        <Modal className='animated fadeIn delay-1s' dimmer={dimmer} open={open} onClose={this.close}>
-          <Modal.Header>Add Ticket</Modal.Header>
+        <Modal className='animated fadeIn delay-1s' size='mini' dimmer={dimmer} open={open} onClose={this.close}>
+          <Modal.Header>Delete Confirmation</Modal.Header>
           <Modal.Content image>
-            <FormAddTicket />
+            <FormDeleteConfirmation />
           </Modal.Content>
         </Modal>
       </div>
