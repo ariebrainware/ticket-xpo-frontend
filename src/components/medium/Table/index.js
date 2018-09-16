@@ -75,7 +75,7 @@ export default class TableTicket extends Component {
 
                 <Table.Footer fullWidth>
                     <Table.Row>
-                        <Table.HeaderCell colSpan='7' textAlign='center'>
+                        <Table.HeaderCell colSpan='8' textAlign='center'>
                             <ModalDimmer />
                         </Table.HeaderCell>
                     </Table.Row>
