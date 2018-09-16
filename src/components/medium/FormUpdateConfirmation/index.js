@@ -30,12 +30,14 @@ class FormUpdateConfirmation extends Component {
     }
 
     render() {
+        const {status} = this.state
         let statusOptions = [
             {text:'Open',value:'open'},
             {text:'Active',value:'active'},
             {text:'Failed',value:'failed'},
             {text:'Closed',value:'closed'},
         ]
+        console.log(this.state.status)
         return (
             <Form onSubmit={this.updateTicket}>
                 <Form.Field>
@@ -47,7 +49,7 @@ class FormUpdateConfirmation extends Component {
                         label='Input ticket number to confirmation. e.g. "5b9db382ac713a0015306XXX".' />
                 </Form.Field>
                 <Form.Field>
-                    <Dropdown placeholder='Status' name='status' onChange={this.handleChange} options={statusOptions}/>
+                    <Dropdown placeholder='Status' value={status} onChange={this.handleChange} options={statusOptions}/>
                 </Form.Field>
                 <Form.Field>
                     <Form.Field
