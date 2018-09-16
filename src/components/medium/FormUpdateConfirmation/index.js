@@ -30,7 +30,6 @@ class FormUpdateConfirmation extends Component {
     }
 
     render() {
-        const {status} = this.state
         let statusOptions = [
             {text:'Open',value:'open'},
             {text:'Active',value:'active'},
