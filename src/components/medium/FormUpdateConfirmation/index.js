@@ -13,8 +13,8 @@ class FormUpdateConfirmation extends Component {
         }
     }
 
-    handleChange = (event) => {
-        this.setState({ [event.target.name]: event.target.value })
+    handleChange = (event,object) => {
+        this.setState({ [object.name]: object.value })
     }
 
     updateTicket = async (event) => {
@@ -49,7 +49,7 @@ class FormUpdateConfirmation extends Component {
                         label='Input ticket number to confirmation. e.g. "5b9db382ac713a0015306XXX".' />
                 </Form.Field>
                 <Form.Field>
-                    <Dropdown placeholder='Status' value={status} onChange={this.handleChange} options={statusOptions}/>
+                    <Dropdown placeholder='Status' name='status' onChange={this.handleChange} options={statusOptions}/>
                 </Form.Field>
                 <Form.Field>
                     <Form.Field
