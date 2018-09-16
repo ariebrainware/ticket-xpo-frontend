@@ -30,8 +30,14 @@ class FormUpdateConfirmation extends Component {
     }
 
     render() {
+        let statusOptions = [
+            {text:'Open',value:'open'},
+            {text:'Active',value:'active'},
+            {text:'Failed',value:'failed'},
+            {text:'Closed',value:'closed'},
+        ]
         return (
-            <Form onSubmit={this.deleteTicket}>
+            <Form onSubmit={this.updateTicket}>
                 <Form.Field>
                     <Form.Field
                         control={Input}
@@ -41,14 +47,7 @@ class FormUpdateConfirmation extends Component {
                         label='Input ticket number to confirmation. e.g. "5b9db382ac713a0015306XXX".' />
                 </Form.Field>
                 <Form.Field>
-                    <Dropdown text='Status' name='status'>
-                        <Dropdown.Menu>
-                            <Dropdown.Item text='Open' value='open' onClick={this.handleChange} />
-                            <Dropdown.Item text='Active' value='close' onClick={this.handleChange} />
-                            <Dropdown.Item text='Failed' value='failed' onClick={this.handleChange} />
-                            <Dropdown.Item text='Closed' value='closed' onClick={this.handleChange} />
-                        </Dropdown.Menu>
-                    </Dropdown>
+                    <Dropdown placeholder='Status' name='status' onChange={this.handleChange} options={statusOptions}/>
                 </Form.Field>
                 <Form.Field>
                     <Form.Field
