@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Table } from 'semantic-ui-react'
 
-import Button from '../../small/Button'
 import GetData from '../../../function/GetData'
 import ModalDimmer from '../ModalDimmer';
 import ModalDeleteConfirmation from '../../small/ModalDeleteConfirmation'
+import ModalUpdateConfirmation from '../../small/ModalUpdateConfirmation'
 
 import 'semantic-ui-css/semantic.min.css'
 import 'animate.css'
@@ -43,7 +43,7 @@ export default class TableTicket extends Component {
             const { name, status, derivation, destination, log ,_id} = item
             return (
                 <Table.Row>
-                    <Table.Cell collapsing><Button iconType='edit' toggle /></Table.Cell>
+                    <Table.Cell collapsing><ModalUpdateConfirmation /></Table.Cell>
                     <Table.Cell textAlign='center'>{_id}</Table.Cell>
                     <Table.Cell textAlign='center'>{name}</Table.Cell>
                     <Table.Cell textAlign='center'>{status}</Table.Cell>
