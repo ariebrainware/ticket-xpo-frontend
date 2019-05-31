@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-scripts": "^2.1.1",
+    "react-scripts": "^3.0.1",
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.5",
     "sweetalert": "^2.1.0"
